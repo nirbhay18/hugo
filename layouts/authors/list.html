@@ -39,7 +39,6 @@
                 {{ range $brand }}
                 {{/*  Deprecation warning(v1.0.0) starts  */}}
                 {{ if .icon_pack }}
-                {{ warnf "Param 'icon_pack' in %q is deprecated and will be removed in Eureka v1.0.0. Use 'iconPack' instead." $.File.Path }}
                 {{ end }}
                 {{ $iconPack := .iconPack | default .icon_pack }}
                 {{/*  Deprecation warning(v1.0.0) ends  */}}
